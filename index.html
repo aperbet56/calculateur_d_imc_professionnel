@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculateur d'IMC Professionnel & Guide de Santé</title>
+    <!-- CDN font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    <!-- Importation des fichiers css -->
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Début du header -->
+    <header>
+      <h1>Calculateur d'IMC Professionnel</h1>
+      <p class="subtitle">
+        Évaluez votre Indice de Masse Corporelle selon les critères officiels de
+        l'OMS
+      </p>
+    </header>
+    <!-- Fin du header-->
+
+    <!-- Début du main -->
+    <main class="main-layout">
+      <!-- COLONNE GAUCHE : Application interactive, Conseils et Historique -->
+      <div class="layout-left">
+        <!-- Début de ma section calculator-section -->
+        <section class="calculator-section">
+          <!-- Article : Le formulaire de saisie -->
+          <article class="card input-card">
+            <h2>Vos mesures</h2>
+            <form id="imcForm">
+              <div class="input-group">
+                <label for="weight"> Poids (en kg)</label>
+                <input
+                  type="number"
+                  id="weight"
+                  step="0.1"
+                  placeholder="Ex: 70"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="height">Taille (en cm)</label>
+                <input
+                  type="number"
+                  id="height"
+                  step="1"
+                  placeholder="Ex: 175"
+                  required
+                />
+              </div>
+
+              <button type="submit">Calculer mon IMC</button>
+            </form>
+
+            <!-- Messages d'erreur -->
+            <div id="error" class="error-message"></div>
+          </article>
+
+          <!-- Article : L'affichage du résultat -->
+          <article id="resultBox" class="card result-box">
+            <h2 class="visually-hidden">Votre Résultat</h2>
+            <div id="imcValue" class="imc-value">0.0</div>
+            <div id="imcStatus" class="imc-status">Statut</div>
+          </article>
+        </section>
+        <!-- Fin de la section-->
+
+        <!-- Début de la section : Conseils personnalisés dynamiques -->
+        <section id="adviceSection" class="advice-section">
+          <article class="card advice-card">
+            <h2>Recommandations Personnalisées</h2>
+            <p id="adviceText" class="info-text"></p>
+          </article>
+        </section>
+        <!-- Fin de la section -->
+
+        <!-- Début de la  section : Historique des calculs -->
+        <section class="history-section">
+          <article class="card history-card">
+            <div class="history-header">
+              <h2>Historique de vos calculs</h2>
+              <button id="clearHistoryBtn" class="btn-secondary">
+                Effacer
+              </button>
+            </div>
+            <ul id="historyList" class="history-list">
+              <li class="empty-history">
+                Aucun calcul enregistré pour le moment.
+              </li>
+            </ul>
+          </article>
+        </section>
+        <!-- Fin de la section -->
+      </div>
+      <!-- Fin COLONNE GAUCHE -->
+
+      <!-- COLONNE DROITE : Informations, Tableaux et Guides de Santé -->
+      <div class="layout-right">
+        <!-- Début de la section info-section -->
+        <section class="info-section">
+          <!-- Bloc de texte 1 : Comprendre l'IMC -->
+          <article class="card text-card">
+            <h2>Qu'est-ce que l'IMC et pourquoi le calculer ?</h2>
+            <p class="info-text">
+              L'<strong>Indice de Masse Corporelle (IMC)</strong> est un calcul
+              mathématique simple qui établit un rapport entre votre poids et le
+              carré de votre taille (kg/m²). Validé mondialement, il permet
+              d'identifier rapidement un déséquilibre de poids. <br /><br />
+              Surveiller son IMC aide à anticiper et limiter le développement de
+              nombreuses pathologies chroniques. Un IMC élevé augmente
+              significativement les risques de maladies cardiovasculaires, de
+              diabète de type 2 et d'hypertension artérielle. À l'inverse, un
+              IMC trop bas peut révéler des carences nutritionnelles importantes
+              ou une fragilité osseuse.
+            </p>
+          </article>
+
+          <!-- Article : Tableau officiel OMS -->
+          <article class="card table-card">
+            <h2>Interprétation officielle de l'OMS</h2>
+            <p class="info-text">
+              L'Indice de Masse Corporelle (IMC) est l'outil standardisé utilisé
+              par l'Organisation Mondiale de la Santé pour évaluer les risques
+              majeurs associés à la dénutrition, au surpoids et à l'obésité.
+            </p>
+
+            <table class="imc-table">
+              <thead>
+                <tr>
+                  <th>IMC (kg/m²)</th>
+                  <th>Classification médicale</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="row-maigreur">
+                  <td>Moins de 18,5</td>
+                  <td>Insuffisance pondérale</td>
+                </tr>
+                <tr class="row-normal">
+                  <td>De 18,5 à 24,9</td>
+                  <td>Corpulence normale</td>
+                </tr>
+                <tr class="row-surpoids">
+                  <td>De 25,0 à 29,9</td>
+                  <td>Surpoids</td>
+                </tr>
+                <tr class="row-obesite">
+                  <td>30,0 et plus</td>
+                  <td>Obésité</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+
+          <!-- Grille interne pour les sous-articles -->
+          <div class="text-grid">
+            <!-- Article : Les limites de l'indicateur -->
+            <article class="card text-card">
+              <h2>Les limites de la méthode</h2>
+              <p class="info-text">
+                Bien que l'IMC soit un excellent indicateur statistique global
+                pour la population générale, il présente plusieurs limites
+                individuelles. <br /><br />
+                Il ne distingue pas la <strong>masse musculaire</strong> (très
+                lourde) de la <strong>masse grasse</strong>. Ainsi, un athlète
+                de haut niveau peut être classé en "surpoids" alors que sa masse
+                grasse est infime. De plus, il ne reflète pas la répartition de
+                la graisse abdominale, qui est pourtant le principal facteur de
+                risque cardiovasculaire.
+              </p>
+            </article>
+
+            <!-- Article : Conseils généraux -->
+            <article class="card text-card">
+              <h2>Adopter une hygiène globale</h2>
+              <p class="info-text">
+                Un poids d'équilibre ne dépend pas uniquement des calories
+                consommées. Une bonne santé repose sur trois piliers
+                fondamentaux :<br /><br />
+                &bull; <strong>L'alimentation :</strong> Privilégier les
+                aliments bruts, les légumes de saison et limiter les produits
+                ultra-transformés.<br />
+                &bull; <strong>L'activité physique :</strong> Pratiquer au moins
+                30 minutes de marche active par jour pour stimuler le
+                métabolisme.<br />
+                &bull; <strong>Le sommeil :</strong> Dormir entre 7h et 8h par
+                nuit pour réguler les hormones de la faim (ghréline et leptine).
+              </p>
+            </article>
+          </div>
+        </section>
+        <!-- Fin de la section -->
+      </div>
+      <!-- Fin COLONNE DROITE -->
+    </main>
+    <!-- Fin du main -->
+
+    <!-- Début du footer -->
+    <footer>
+      <p>
+        &copy; 2026 - Application Santé & Bien-être. Conçu selon les standards
+        de l'OMS.
+      </p>
+    </footer>
+    <!-- Fin du footer -->
+
+    <!-- Importation du fichier JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
