@@ -157,7 +157,19 @@ input {
     border: 2px solid var(--border-color);
     transition: border-color 0.2s;
     appearance: none;
+}
+
+/**** Chrome, Safari, Edge, Opera = cacher les fèches ****/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+    margin: 0;
+}
+
+/**** Firefox = cacher les flèches ****/
+input[type=number] {
+    appearance: none;
+    -moz-appearance: textfield;
 }
 
 input:focus {
