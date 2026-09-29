@@ -160,6 +160,7 @@ input {
 }
 
 /**** Chrome, Safari, Edge, Opera = cacher les fèches ****/
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -167,6 +168,7 @@ input::-webkit-inner-spin-button {
 }
 
 /**** Firefox = cacher les flèches ****/
+
 input[type=number] {
     appearance: none;
     -moz-appearance: textfield;
@@ -381,4 +383,51 @@ footer {
     color: var(--text-muted);
     margin-top: auto;
     padding-top: 40px;
+}
+
+/**** Responsive design version tablette  (Écrans >= 768px) ****/
+
+@media screen and (min-width: 768px) {
+    body {
+        padding: 30px;
+    }
+
+    .app-header {
+        margin-bottom: 32px;
+    }
+
+    .app-header h1 {
+        font-size: 28px;
+    }
+
+    .layout-right {
+        order: 2;
+    }
+
+    .layout-left {
+        order: 1;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    label,
+    .info-text {
+        font-size: 16px;
+    }
+
+    .text-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .imc-table {
+        font-size: 14px;
+    }
 }
