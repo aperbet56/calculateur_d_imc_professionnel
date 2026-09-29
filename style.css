@@ -1,0 +1,372 @@
+/**** Importation des polices ****/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
+
+/**** Reset ****/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**** Variables css ****/
+
+:root {
+    --bg-color: #f8fafc;
+    --card-bg: #fffffe;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --primary: #3b82f6;
+    /* Couleurs thématiques de l'IMC (Normes OMS) */
+    --maigreur: #2563eb;
+    --normal: #16a34a;
+    --surpoids: #ea580c;
+    --obesite: #dc2626;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+    font-family: "Quicksand", sans-serif;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1,
+h2 {
+    font-family: "Nunito", sans-serif;
+}
+
+/**** body ****/
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: "Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/**** header ****/
+
+header {
+    text-align: center;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+header .subtitle {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+/**** main ****/
+
+.main-layout {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.calculator-section,
+.info-section,
+.text-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.layout-right {
+    order: 1;
+}
+
+.layout-left {
+    order: 2;
+}
+
+/**** Composant card ****/
+
+.card {
+    width: 100%;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0px 2px 8px 1px rgba(64, 60, 67, 0.24);
+}
+
+.card h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/**** formulaire ****/
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #334155;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid var(--border-color);
+    transition: border-color 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary);
+    color: var(--card-bg);
+    transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out,
+        border-radius 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #2563eb;
+    border-radius: 50px;
+    color: var(--card-bg);
+}
+
+/**** Contenu textuel et tableau ****/
+
+.info-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.table-card {
+    overflow-x: auto;
+    /* Défilement x de secours sur très petit mobile */
+}
+
+.imc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.imc-table th,
+.imc-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.imc-table th {
+    font-weight: 700;
+    background-color: #f1f5f9;
+    border-left: 4px solid #f1f5f9;
+}
+
+.row-maigreur td:first-child {
+    border-left: 4px solid var(--maigreur);
+    font-weight: 600;
+}
+
+.row-normal td:first-child {
+    border-left: 4px solid var(--normal);
+    font-weight: 600;
+}
+
+.row-surpoids td:first-child {
+    border-left: 4px solid var(--surpoids);
+    font-weight: 600;
+}
+
+.row-obesite td:first-child {
+    border-left: 4px solid var(--obesite);
+    font-weight: 600;
+}
+
+.imc-value {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.imc-status {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.bg-maigreur {
+    background-color: #eff6ff;
+    color: var(--maigreur);
+    border-color: #bfdbfe;
+}
+
+.bg-normal {
+    background-color: #f0fdf4;
+    color: var(--normal);
+    border-color: #bbf7d0;
+}
+
+.bg-surpoids {
+    background-color: #fff7ed;
+    color: var(--surpoids);
+    border-color: #fed7aa;
+}
+
+.bg-obesite {
+    background-color: #fef2f2;
+    color: var(--obesite);
+    border-color: #fecaca;
+}
+
+.result-box,
+.advice-card {
+    margin-bottom: 20px;
+}
+
+/*** historique ****/
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.history-header h2 {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.btn-secondary {
+    width: auto;
+    padding: 6px 12px;
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+    border-radius: 6px;
+    border-color: 1px solid #2563eb;
+}
+
+.history-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+    font-size: 15px;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-left-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.history-date {
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.history-badge {
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.empty-history {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+    padding: 10px 0;
+    font-style: italic;
+}
+
+.error-message {
+    color: var(--obesite);
+    background-color: #fef2f2;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 12px;
+    border: 1px solid #fecaca;
+    display: none;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-top: auto;
+    padding-top: 40px;
+}
