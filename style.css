@@ -431,3 +431,33 @@ footer {
         font-size: 14px;
     }
 }
+
+/**** Responsive design version ordinateur (Écrans >= 1024px) ****/
+
+@media screen and (min-width: 1024px) {
+    body {
+        padding: 40px 20px;
+    }
+
+    .main-layout {
+        max-width: 1240px;
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        align-items: start;
+        gap: 30px;
+    }
+
+    .layout-left {
+        /* Rend le bloc de gauche collant au défilement */
+        position: sticky;
+        top: 20px;
+    }
+
+    .imc-value {
+        font-size: 44px;
+    }
+
+    .imc-table {
+        font-size: 16px;
+    }
+}
