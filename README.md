@@ -37,7 +37,7 @@ Cette application est un outil d’information et ne remplace en aucun cas un av
 
 ## 📸 Démonstration
 
-Lien vers le projet :
+Lien vers le projet : https://aperbet56.github.io/calculateur_d_imc_professionnel/
 
 ## 🛠️ Projet développé avec
 
