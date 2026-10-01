@@ -13,6 +13,7 @@ Ce projet dispose de plusieurs fonctionnalités :
   - Surpoids
   - Obésité
 - **Indicateurs visuels** : Code couleur dynamique associé au résultat pour une meilleure lisibilité.
+- **Gestion des erreurs** : Empêche la validation si les champs sont vides, négatifs ou si les valeurs saisies sont irréalistes (ex: taille de 10 cm ou poids de 800 kg) et affichage d'un message d'erreur clair
 - **Historique des calculs** : Sauvegarde locale des anciennes mesures pour suivre son évolution .
   **Design Responsive** : Interface optimisée pour une utilisation fluide sur smartphones, tablettes et ordinateurs.
 
