@@ -30,6 +30,10 @@ IMC = poids / (taille_en_metres \* taille_en_metres)
 | 25 à 29.9          | Surpoids               |
 | 30 et +            | Obésité                |
 
+## ⚠️ Avertissement médical
+
+Cette application est un outil d’information et ne remplace en aucun cas un avis médical professionnel. L'IMC est un indicateur général qui ne prend pas en compte la masse musculaire, la densité osseuse ou la répartition des graisses. Pour un bilan de santé complet, consultez un médecin ou un nutritionniste.
+
 ## 📸 Démonstration
 
 Lien vers le projet :
