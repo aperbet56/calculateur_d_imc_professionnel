@@ -174,14 +174,21 @@ imcForm.addEventListener("submit", (e) => {
   calculateIMC();
 });
 
-// Ecoute de l'événement "click" sur le bouton pour effacer l'historique
-clearHistoryBtn.addEventListener("click", () => {
+// Déclaration de la fonction deleteDataHistory() qui va permettre de supprimer les données du localStorage
+const deleteDataHistory = () => {
   // Tableau vide
   dataHistory = [];
   localStorage.removeItem("imcHistory");
+  // Vider les champs de formulaire
+  imcForm.reset();
+  // Rechargement de la page
+  window.location.reload();
   // Appel de la fonction displayDataHistory()
   displayDataHistory();
-});
+};
+
+// Ecoute de l'événement "click" et appel de la fonction deleteDataHistory
+clearHistoryBtn.addEventListener("click", deleteDataHistory);
 
 // Déclaration de la fonction getCurrentYear qui va permettre l'affiche de l'année dans le footer
 const getCurrentYear = () => {
