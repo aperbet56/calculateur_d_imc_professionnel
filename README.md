@@ -16,6 +16,11 @@ Ce projet dispose de plusieurs fonctionnalités :
 - **Historique des calculs** : Sauvegarde locale des anciennes mesures pour suivre son évolution .
   **Design Responsive** : Interface optimisée pour une utilisation fluide sur smartphones, tablettes et ordinateurs.
 
+## 🧮 Formule mathématique utilisée
+
+L'indice de masse corporelle est calculé à l'aide de la formule standard suivante :
+IMC = poids / (taille_en_metres \* taille_en_metres)
+
 ## 📸 Démonstration
 
 Lien vers le projet :
