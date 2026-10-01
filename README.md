@@ -51,6 +51,7 @@ Lien vers le projet : https://aperbet56.github.io/calculateur_d_imc_professionne
 
 - Utilisation des balises sémantiques HTML5
 - CSS3
+- Variables CSS
 - Flexbox
 - Animations css (transition)
 - Page web responsive
