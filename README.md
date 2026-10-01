@@ -21,6 +21,15 @@ Ce projet dispose de plusieurs fonctionnalités :
 L'indice de masse corporelle est calculé à l'aide de la formule standard suivante :
 IMC = poids / (taille_en_metres \* taille_en_metres)
 
+## 📊 Grille d'interprétation (OMS)
+
+| IMC (kg/m²)        | Classification         |
+| :----------------- | :--------------------- |
+| - de 18.5          | Maigreur               |
+| **de 18.5 à 24.9** | **Corpulence normale** |
+| 25 à 29.9          | Surpoids               |
+| 30 et +            | Obésité                |
+
 ## 📸 Démonstration
 
 Lien vers le projet :
