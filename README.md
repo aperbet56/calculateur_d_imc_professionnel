@@ -19,3 +19,22 @@ Ce projet dispose de plusieurs fonctionnalités :
 ## 📸 Démonstration
 
 Lien vers le projet :
+
+## 🛠️ Projet développé avec
+
+- Utilisation des balises sémantiques HTML5
+- CSS3
+- Flexbox
+- Animations css (transition)
+- Page web responsive
+- Mobile first
+- Commentaires HTML
+- Commentaires CSS
+- Importation d'un normaliseur : le fichier normalize
+- Importation des polices "Quicksand" et 'Nunito"
+- JavaScript (ES6)
+- Code JavaScript commenté
+- Manipulation dynamique du DOM.
+- Gestionnaires d'événements (`click`)
+- localStorage pour l'historique des données
+- Condition if... else if... else...
