@@ -1,6 +1,10 @@
 ## ⚖️ CALCULATEUR D'IMC (INDICE DE MASSE CORPORELLE)
 
-- **Design mobile**
+- **Design Desktop**
+
+![Design preview for the project](./img/preview.png)
+
+- **Design Mobile**
 
 ![Design preview for the project](./img/preview-mobile.png)
 
