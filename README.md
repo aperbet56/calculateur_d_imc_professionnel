@@ -1,5 +1,9 @@
 ## ⚖️ CALCULATEUR D'IMC (INDICE DE MASSE CORPORELLE)
 
+- **Design mobile**
+
+![Design preview for the project](./img/preview-mobile.png)
+
 ## 🚀 Le challenge
 
 Création d'une application simple, intuitive et réactive qui permet aux utilisateurs de calculer leur Indice de Masse Corporelle (IMC) en quelques clics, d'obtenir une interprétation immédiate de leur résultat selon les critères de l'OMS et de recevoir des conseils personnalisés.
