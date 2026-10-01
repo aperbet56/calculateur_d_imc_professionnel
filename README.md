@@ -56,3 +56,7 @@ Lien vers le projet :
 - Gestionnaires d'événements (`click`)
 - localStorage pour l'historique des données
 - Condition if... else if... else...
+
+## 📄 Licence
+
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
