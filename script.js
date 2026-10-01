@@ -11,6 +11,7 @@ const imcStatusDisplay = document.querySelector("#imcStatus");
 const adviceCardText = document.querySelector(".advice-card p");
 const adviceText = document.querySelector("#adviceText");
 const historyList = document.querySelector("#historyList");
+const copyrightYear = document.querySelector(".year");
 
 // Initialisation de l'historique grâce au localStorage : récupère les données ou crée un tableau vide
 let dataHistory = JSON.parse(localStorage.getItem("imcHistory")) || [];
@@ -131,11 +132,11 @@ const calculateIMC = () => {
   }
 
   // Affichage immédiat des résultats
-  imcValueDisplay.textContent = imcRounded;
-  imcStatusDisplay.textContent = statusText;
+  imcValueDisplay.textContent = `${imcRounded}`;
+  imcStatusDisplay.textContent = `${statusText}`;
   // Ajout de la classe "colorClass" en fonction de l'imc calculé
   resultBox.classList.add(colorClass);
-  adviceText.textContent = adviceTemplates[adviceKey];
+  adviceText.textContent = `${adviceTemplates[adviceKey]}`;
 
   // Génération automatique de la date et de l'heure au format local français
   const now = new Date();
@@ -181,3 +182,13 @@ clearHistoryBtn.addEventListener("click", () => {
   // Appel de la fonction displayDataHistory()
   displayDataHistory();
 });
+
+// Déclaration de la fonction getCurrentYear qui va permettre l'affiche de l'année dans le footer
+const getCurrentYear = () => {
+  const today = new Date();
+  const currentYear = today.getFullYear();
+  copyrightYear.textContent = `${currentYear}`;
+};
+
+// Appel de la fonction getCurrentYear()
+getCurrentYear();
