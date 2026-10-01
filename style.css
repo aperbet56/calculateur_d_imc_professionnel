@@ -125,7 +125,7 @@ header .subtitle {
 }
 
 .card:hover {
-    box-shadow: 0px 2px 8px 1px rgba(64, 60, 67, 0.24);
+    box-shadow: 0 2px 8px 1px rgba(64, 60, 67, 0.24);
 }
 
 .card h2 {
@@ -392,11 +392,11 @@ footer {
         padding: 30px;
     }
 
-    .app-header {
+    header {
         margin-bottom: 32px;
     }
 
-    .app-header h1 {
+    header h1 {
         font-size: 28px;
     }
 
