@@ -57,6 +57,16 @@ Lien vers le projet :
 - localStorage pour l'historique des données
 - Condition if... else if... else...
 
+## 📂 Structure du projet
+
+```text
+├── index.html          # Structure HTML5 sémantique
+├── style.css           # Styles de la grille et de la lightbox
+└── script.js           # Logique JavaScript notammnet pour le calcul de l'imc et la sauvegarde des données dans le localStorage
+```
+
+---
+
 ## 📄 Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
