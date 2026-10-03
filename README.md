@@ -70,12 +70,17 @@ Lien vers le projet : https://aperbet56.github.io/calculateur_d_imc_professionne
 ## 📂 Structure du projet
 
 ```text
-├── index.html          # Structure HTML5 sémantique
-├── style.css           # Styles de la grille et de la lightbox
-└── script.js           # Logique JavaScript notammnet pour le calcul de l'imc et la sauvegarde des données dans le localStorage
+calculateur_d_imc_professionnel/
+│
+├── index.html          # Page principale du site
+├── normalize.css       # Fichier normalize.css
+├── style.css           # Fichier de styles principal
+├── script.js           # Logique et interactivité en JavaScript
+│
+├── img/                # favicon et prewiews
+│
+└── README.md           # Fichier de documentation du projet
 ```
-
----
 
 ## 📄 Licence
 
